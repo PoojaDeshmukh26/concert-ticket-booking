@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Ticket Booking</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Coldplay Concert Booking</h1>
+    </header>
+    <main>
+        <form id="bookingForm">
+            <section>
+                <label for="concertSelect">Select a Concert Date and Venue:</label>
+                <select id="concertSelect" required>
+                    <option value="">--Select Concert--</option>
+                    <option value="oct15-london">October 15, 2024 - London</option>
+                    <option value="nov10-ny">November 10, 2024 - New York</option>
+                    <option value="dec5-sydney">December 5, 2024 - Sydney</option>
+                </select>
+            </section>
+            <section>
+                <label for="ticketType">Select Ticket Type:</label>
+                <select id="ticketType" required>
+                    <option value="">--Select Ticket Type--</option>
+                    <option value="general">General Admission ($80)</option>
+                    <option value="vip">VIP ($150)</option>
+                </select>
+            </section>
+            <section>
+                <label for="ticketQuantity">Select Ticket Quantity:</label>
+                <input type="number" id="ticketQuantity" min="1" required>
+            </section>
+            <button type="button" id="confirmButton">Confirm Booking</button>
+        </form>
+        <div id="bookingSummary" class="hidden">
+            <button id="confirmTicket">Confirm</button>
+            <button id="editButton">Edit Booking</button>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
